@@ -125,7 +125,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django_mongodb.fields.ObjectIdAutoField'
 
 MIGRATION_MODULES = {
-    'admin': '{{ project_name }}.mongo_migrations.admin',
-    'auth': '{{ project_name }}.mongo_migrations.auth',
-    'contenttypes': '{{ project_name }}.mongo_migrations.contenttypes',
+    'admin': 'mongo_migrations.admin',
+    'auth': 'mongo_migrations.auth',
+    'contenttypes': 'mongo_migrations.contenttypes',
 }
