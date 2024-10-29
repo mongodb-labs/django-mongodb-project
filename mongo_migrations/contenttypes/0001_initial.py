@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='ContentType',
             fields=[
-                ('id', django_mongodb.fields.auto.ObjectIdAutoField(auto_created=True, db_column='_id', primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', django_mongodb.fields.ObjectIdAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('app_label', models.CharField(max_length=100)),
                 ('model', models.CharField(max_length=100, verbose_name='python model class name')),
             ],
