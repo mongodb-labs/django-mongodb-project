@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/
 """
 
+import django_mongodb
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -73,15 +75,8 @@ WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django_mongodb",
-        "NAME": "my_database",
-        # "USER": "my_username",
-        # "PASSWORD": "my_password",
-        # "OPTIONS": {...},
-    },
-}
+DATABASES = {}
+DATABASES["default"] = django_mongodb.parse_uri("mongodb://localhost:27017/{{ project_name }}")
 
 # Password validation
 # https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#auth-password-validators
