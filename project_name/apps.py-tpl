@@ -4,12 +4,12 @@ from django.contrib.contenttypes.apps import ContentTypesConfig
 
 
 class MongoAdminConfig(AdminConfig):
-    default_auto_field = "django_mongodb.fields.ObjectIdAutoField"
+    default_auto_field = "django_mongodb_backend.fields.ObjectIdAutoField"
 
 
 class MongoAuthConfig(AuthConfig):
-    default_auto_field = "django_mongodb.fields.ObjectIdAutoField"
+    default_auto_field = "django_mongodb_backend.fields.ObjectIdAutoField"
 
 
 class MongoContentTypesConfig(ContentTypesConfig):
-    default_auto_field = "django_mongodb.fields.ObjectIdAutoField"
+    default_auto_field = "django_mongodb_backend.fields.ObjectIdAutoField"
