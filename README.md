@@ -2,8 +2,13 @@
 
 This is the starter template for the Django-MongoDB Backend. In order to use, with your version of `django-mongodb-backend` and `django`:
 
-* Find your Django version.
-* Based on your Django version, provide that in the link defined below.
+* Find your Django version. To do so from the command line, make sure you have django installed and type:
+
+```bash
+django-admin --version
+>> 5.0
+```
+
 
 ## Create the Django Project
 From your shell, run the following command to create a new Django project replacing the `{{ project_name }}` and `{{ version }}` sections. 
