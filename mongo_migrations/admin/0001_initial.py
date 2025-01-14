@@ -3,7 +3,7 @@
 import django.contrib.admin.models
 import django.db.models.deletion
 import django.utils.timezone
-import django_mongodb.fields.auto
+import django_mongodb_backend.fields.auto
 from django.conf import settings
 from django.db import migrations, models
 
@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='LogEntry',
             fields=[
-                ('id', django_mongodb.fields.auto.ObjectIdAutoField(auto_created=True, db_column='_id', primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', django_mongodb_backend.fields.ObjectIdAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('action_time', models.DateTimeField(default=django.utils.timezone.now, editable=False, verbose_name='action time')),
                 ('object_id', models.TextField(blank=True, null=True, verbose_name='object id')),
                 ('object_repr', models.CharField(max_length=200, verbose_name='object repr')),
