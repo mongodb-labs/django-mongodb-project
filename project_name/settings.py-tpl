@@ -78,6 +78,7 @@ WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 DATABASES = {
     "default": django_mongodb_backend.parse_uri("mongodb://localhost:27017/{{ project_name }}"),
 }
+DATABASE_ROUTERS = ["django_mongodb_backend.routers.MongoRouter"]
 
 # Password validation
 # https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#auth-password-validators
@@ -125,5 +126,3 @@ MIGRATION_MODULES = {
     'auth': 'mongo_migrations.auth',
     'contenttypes': 'mongo_migrations.contenttypes',
 }
-
-DATABASE_ROUTERS = ["django_mongodb_backend.routers.MongoRouter"]
