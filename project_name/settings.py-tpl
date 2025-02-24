@@ -125,3 +125,5 @@ MIGRATION_MODULES = {
     'auth': 'mongo_migrations.auth',
     'contenttypes': 'mongo_migrations.contenttypes',
 }
+
+DATABASE_ROUTERS = ["django_mongodb_backend.routers.MongoRouter"]
