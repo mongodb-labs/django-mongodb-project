@@ -79,6 +79,10 @@ DATABASES = {
     "default": django_mongodb_backend.parse_uri("mongodb://localhost:27017/{{ project_name }}"),
 }
 
+# Custom database router
+# https://docs.djangoproject.com/en/dev/ref/settings/#database-routers
+DATABASE_ROUTERS = ["django_mongodb_backend.routers.MongoRouter"]
+
 # Password validation
 # https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#auth-password-validators
 
