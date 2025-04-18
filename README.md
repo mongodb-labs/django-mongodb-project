@@ -8,7 +8,7 @@ In order to use it with your version of Django:
 
 ```bash
 django-admin --version
->> 5.1
+>> 5.2
 ```
 
 ## Create the Django project
@@ -20,9 +20,9 @@ replacing the `{{ project_name }}` and `{{ version }}` sections.
 django-admin startproject {{ project_name }} --template https://github.com/mongodb-labs/django-mongodb-project/archive/refs/heads/{{ version }}.x.zip
 ```
 
-For a project named `5_1_example` that runs on `django==5.1.*`
+For a project named `5_2_example` that runs on `django==5.2.*`
 the command would look like this:
 
 ```bash
-django-admin startproject 5_1_example --template https://github.com/mongodb-labs/django-mongodb-project/archive/refs/heads/5.1.x.zip
+django-admin startproject 5_2_example --template https://github.com/mongodb-labs/django-mongodb-project/archive/refs/heads/5.2.x.zip
 ```
