@@ -10,8 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/
 """
 
-import django_mongodb_backend
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -75,7 +73,11 @@ WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 # https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
 
 DATABASES = {
-    "default": django_mongodb_backend.parse_uri("mongodb://localhost:27017/{{ project_name }}"),
+    'default': {
+        'ENGINE': 'django_mongodb_backend',
+        'HOST': 'mongodb://localhost:27017/',
+        'NAME': '{{ project_name }}',
+    },
 }
 
 # Database routers
